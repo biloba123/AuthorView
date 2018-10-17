@@ -6,8 +6,6 @@
 #import "AuthorView.h"
 #import "ECLabel.h"
 
-const CGFloat DefaultTextSize = 26;
-
 @interface AuthorView ()
 @property(weak, nonatomic) ECLabel *label;
 @property(weak, nonatomic) UIImageView *imageView;
@@ -64,11 +62,8 @@ const CGFloat DefaultTextSize = 26;
     CGFloat cornerRadius = labelFrame.size.height / 2;
     self.label.layer.cornerRadius = cornerRadius;
     self.label.layer.masksToBounds = YES;
-    self.label.padding = UIEdgeInsetsMake(0, cornerRadius, 0, height / 2+16);
-    [self.name sizeWithAttributes:@{
-            NSFontAttributeName: self.label.font,
-    }];
-
+    self.label.padding = UIEdgeInsetsMake(0, cornerRadius, 0, height / 2);
+    self.label.font = [UIFont systemFontOfSize:height * 0.24];
 }
 
 - (void)setName:(NSString *)name {

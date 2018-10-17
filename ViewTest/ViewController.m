@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     AuthorView *authorView= [AuthorView new];
-    authorView.frame= CGRectMake(0, 100, 260, 100);
+    authorView.frame= CGRectMake(0, 100, 308, 100);
     authorView.name=@"Qingyang";
     authorView.profile= [UIImage imageNamed:@"head.jpeg"];
 
